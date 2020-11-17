@@ -1,0 +1,27 @@
+.header-section {
+    position: relative;
+}
+
+.header-section > img {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.heading-text {
+    user-select: none;
+    font-family: poppins;
+    font-size: calc(20px + 5vw);
+    color: #ffffff;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+
+.information-section {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}

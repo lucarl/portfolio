@@ -1,0 +1,98 @@
+.grid-container {
+  grid-gap: 50px 100px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgb(255, 255, 255);
+  padding: 150px;
+}
+
+@media(max-width:950px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.grid-item {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.grid-item > img {
+  width: 100%;
+  height: auto;
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover p {
+  opacity: 1;
+}
+
+.grid-item:hover .overlay {
+  opacity: 0.6;
+}
+
+.grid-item:hover {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05);
+  -webkit-box-shadow: 5px 10px 5px 6px rgba(0, 0, 0, 0.4); 
+  -moz-box-shadow:    5px 10px 5px 6px rgba(0, 0, 0, 0.4);  
+  box-shadow:         10px 20px 30px 3px rgba(0, 0, 0, 0.4);
+}
+
+.grid-item:hover > img {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05);
+}
+
+.grid-item {
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 5px 10px 5px 6px rgba(0, 0, 0, 0.4); 
+  -moz-box-shadow:    5px 10px 5px 6px rgba(0, 0, 0, 0.4);  
+  box-shadow:         5px 10px 15px 3px rgba(0, 0, 0, 0.4);
+}
+
+.overlay {
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgb(0, 0, 0);
+}
+
+.grid-item p {
+  z-index: 100;
+  opacity: 0;
+  color: white;
+  font-size: calc(30px + 1vw);
+  font-family: "poppins";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.description p {
+  top: 40%;
+  font-size: calc(10px + 1vw);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../fonts/Poppins-Light.ttf);
+}
